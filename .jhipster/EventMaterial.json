@@ -1,0 +1,41 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "event",
+            "otherEntityName": "event",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "material",
+            "otherEntityName": "materialReview",
+            "otherEntityRelationshipName": "eventMaterial"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "uploaded",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "url",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "text",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "EventMaterialType",
+            "fieldValues": "PRESENTATION,VIDEO,PICTURE"
+        }
+    ],
+    "changelogDate": "20170923140816",
+    "entityTableName": "event_material",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

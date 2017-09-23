@@ -1,0 +1,30 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "speaker",
+            "otherEntityName": "speaker",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "tags"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "event",
+            "otherEntityName": "event",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "tags"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170923141307",
+    "entityTableName": "tag",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

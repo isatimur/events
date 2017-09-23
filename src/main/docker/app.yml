@@ -1,0 +1,12 @@
+version: '2'
+services:
+    events-app:
+        image: events
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://events-postgresql:5432/events
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+    events-postgresql:
+        extends:
+            file: postgresql.yml
+            service: events-postgresql

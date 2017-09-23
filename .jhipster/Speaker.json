@@ -1,0 +1,48 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "speaker",
+            "relationshipName": "tags",
+            "otherEntityName": "tag",
+            "otherEntityField": "name",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "event",
+            "otherEntityName": "event",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "speakers"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "fio",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "biography",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "logoUrl",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "companyId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "SpeakerStatusType",
+            "fieldValues": "PUBLISHED,UNPUBLISHED"
+        }
+    ],
+    "changelogDate": "20170923140813",
+    "entityTableName": "speaker",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}
